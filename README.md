@@ -36,7 +36,7 @@ On MacOS/Unix system
 
 ### 3. Run  
 
-#####3.1 Start MongoDB instance.
+##### 3.1 Start MongoDB instance.
 
 Open a Terminal window and run following command.<br><br>
 On Windows system
@@ -49,7 +49,7 @@ On MacOS/Unix system
 sudo mongod --dbpath /usr/local/var/mongodb
 ```  
 
-#####3.2 Run Application.
+##### 3.2 Run Application.
 
 In the project directory run following command.
 
@@ -65,7 +65,7 @@ On MacOS/Unix system
 
 Now application is running, open a web browser and browse to http://localhost:8080/
   
-###4. Running Tests
+### 4. Running Tests
 
 To run test,  
 On Windows system
