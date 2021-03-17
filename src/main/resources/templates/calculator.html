@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Mortage Plan Calculator</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link th:href="@{/webjars/bootstrap/4.6.0/css/bootstrap.min.css}" rel="stylesheet">
+</head>
+<body>
+<div>
+    <H1 th:text="'Mortage Plan Calculator '"/>
+    <p></p>
+    <div>
+        <form class="form-horizontal" action="#" th:action="@{/calculate}" th:object="${customer}" method="post">
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Enter your name:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" th:classappend="${#fields.hasErrors('name') ? 'is-invalid' : ''}"
+                           id="name" type="text" name="name" th:field="*{name}">
+                </div>
+                <div class="col-sm-3">
+                    <small th:if="${#fields.hasErrors('name')}" th:errors="*{name} " class="text-danger"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="totalLoan">Enter amount of total loan you need:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" th:classappend="${#fields.hasErrors('totalLoan') ? 'is-invalid' : ''}"
+                           id="totalLoan" type="number" name="totalLoan" step="1" min="0" max="999999999"
+                           placeholder="Value between 0 to 999999999" th:field="*{totalLoan}">
+                </div>
+                <div class="col-sm-3">
+                    <small th:if="${#fields.hasErrors('totalLoan')}" th:errors="*{totalLoan} "
+                           class="text-danger"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="fixedAnnualInterestRate">Enter annual interest rate you would
+                    like to pay:</label>
+                <div class="col-sm-10">
+                    <input class="form-control"
+                           th:classappend="${#fields.hasErrors('yearlyInterestPercentage') ? 'is-invalid' : ''}"
+                           id="fixedAnnualInterestRate" type="number" name="fixedAnnualInterestRate" step="0.1"
+                           min="0.0" max="99.9" placeholder="Value between 0 to 99.9"
+                           th:field="*{yearlyInterestPercentage}">
+                </div>
+                <div class="col-sm-3">
+                    <small th:if="${#fields.hasErrors('yearlyInterestPercentage')}"
+                           th:errors="*{yearlyInterestPercentage} " class="text-danger"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="years">Enter payback time (In years):</label>
+                <div class="col-sm-10">
+                    <input class="form-control" th:classappend="${#fields.hasErrors('years') ? 'is-invalid' : ''}"
+                           id="years" type="number" name="years" step="1" min="1" max="50"
+                           placeholder="Value between 1 to 50" th:field="*{years}">
+                </div>
+                <div class="col-sm-3">
+                    <small th:if="${#fields.hasErrors('years')}" th:errors="*{years} " class="text-danger"></small>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-primary" type="submit">Calculate</button>
+                </div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
