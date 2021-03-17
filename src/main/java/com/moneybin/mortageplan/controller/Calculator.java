@@ -3,6 +3,7 @@ package com.moneybin.mortageplan.controller;
 import com.moneybin.mortageplan.entity.Customer;
 import com.moneybin.mortageplan.service.CustomerService;
 import com.moneybin.mortageplan.utilities.Maths;
+import com.moneybin.mortageplan.utilities.Printer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -41,6 +42,7 @@ public class Calculator {
     public String save(@ModelAttribute("customer") Customer customer, Model model) {
 
         customerService.addCustomer(customer);
+        Printer.printAllCustomers(customerService.getAllCustomers());
         return "index";
     }
 }
