@@ -14,7 +14,7 @@ In order to run this application, following tools must be installed.
 
 ## How to run project?
 
-###1. Clone
+### 1. Clone
 
 ```
 git clone https://github.com/anwar-ulhaq/mortageplan.git
@@ -34,9 +34,10 @@ On MacOS/Unix system
 ./gradlew build
 ```
 
-###3. Run  
+### 3. Run  
 
 #####3.1 Start MongoDB instance.
+
 Open a Terminal window and run following command.<br><br>
 On Windows system
 ```
@@ -49,6 +50,7 @@ sudo mongod --dbpath /usr/local/var/mongodb
 ```  
 
 #####3.2 Run Application.
+
 In the project directory run following command.
 
 On Windows system
