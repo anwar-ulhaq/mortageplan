@@ -6,7 +6,7 @@ import com.moneybin.mortageplan.utilities.Maths;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @AllArgsConstructor
@@ -19,7 +19,7 @@ public class FileService {
         // remove previously entries from database
         //customerService.deleteAllCustomers();
 
-        ArrayList<Customer> customers = FileRepository.readFile();
+        List<Customer> customers = FileRepository.readFile();
 
         for (Customer customer : customers
         ) {

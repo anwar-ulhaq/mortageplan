@@ -2,11 +2,11 @@ package com.moneybin.mortageplan.utilities;
 
 import com.moneybin.mortageplan.entity.Customer;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class Printer {
 
-    public static void printAllCustomers(ArrayList<Customer> customers) {
+    public static void printAllCustomers(List<Customer> customers) {
 
         for (int number = 0; number < customers.size(); number++) {
             System.out.println("****************************************************************************************************");

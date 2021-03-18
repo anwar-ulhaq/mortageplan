@@ -9,7 +9,7 @@ import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import java.util.ArrayList;
+import java.util.List;
 
 @SpringBootApplication
 public class MortageplanApplication implements CommandLineRunner {
@@ -28,7 +28,7 @@ public class MortageplanApplication implements CommandLineRunner {
 
 		fileService.populateDatabaseFromFile();
 
-		ArrayList<Customer> customers = customerService.getAllCustomers();
+		List<Customer> customers = customerService.getAllCustomers();
 		Printer.printAllCustomers(customers);
 	}
 }

@@ -29,7 +29,7 @@ public class MathTest {
     }
 
     @Test
-    void fixedMonthlyPayment () {
+    void fixedMonthlyPayment() {
 
         double totalLoan = 1000000;
         double yearlyInterestPercentage = 12;
